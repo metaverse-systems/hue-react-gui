@@ -114,7 +114,7 @@ class HueGroupList extends Component {
       }
     };
 
-    if(window.Pushed !== undefined) {
+    if(window.Pusher !== undefined) {
       window.Pusher.subscribe('Hue')
         .bind('MetaverseSystems\\HuePHPBackend\\Events\\HueChangeState', (data) => {
           let groups = Object.assign([], this.state.groups);
