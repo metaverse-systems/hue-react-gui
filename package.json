@@ -1,0 +1,70 @@
+{
+  "name": "@metaverse-systems/hue-react-gui",
+  "version": "1.0.3",
+  "description": "",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "author": "Tim Schwartz",
+  "license": "MIT",
+  "peerDependencies": {
+    "@material-ui/core": "^4.10.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-router-dom": "^5.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.2",
+    "@babel/plugin-proposal-class-properties": "^7.0.0",
+    "@babel/plugin-proposal-decorators": "^7.0.0",
+    "@babel/plugin-proposal-do-expressions": "^7.0.0",
+    "@babel/plugin-proposal-export-default-from": "^7.0.0",
+    "@babel/plugin-proposal-export-namespace-from": "^7.0.0",
+    "@babel/plugin-proposal-function-bind": "^7.0.0",
+    "@babel/plugin-proposal-function-sent": "^7.0.0",
+    "@babel/plugin-proposal-json-strings": "^7.0.0",
+    "@babel/plugin-proposal-logical-assignment-operators": "^7.0.0",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.0.0",
+    "@babel/plugin-proposal-numeric-separator": "^7.0.0",
+    "@babel/plugin-proposal-optional-chaining": "^7.0.0",
+    "@babel/plugin-proposal-pipeline-operator": "^7.0.0",
+    "@babel/plugin-proposal-throw-expressions": "^7.0.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
+    "@babel/plugin-syntax-import-meta": "^7.10.1",
+    "@babel/preset-env": "^7.10.2",
+    "@babel/preset-react": "^7.10.1",
+    "@material-ui/core": "^4.10.1",
+    "babel-loader": "^8.1.0",
+    "react-router-dom": "^5.2.0",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
+  },
+  "importModules": [
+    "HueBridgeList",
+    "HueGroupList",
+    "HueLightsAppHeader"
+  ],
+  "routes": [
+    {
+      "route": "/huelights/bridge/:bridge",
+      "component": "HueGroupList",
+      "exact": true
+    },
+    {
+      "route": "/huelights/bridges",
+      "component": "HueBridgeList",
+      "exact": true
+    },
+    {
+      "route": "/huelights",
+      "component": "HueLightsAppHeader",
+      "exact": true
+    }
+  ],
+  "link": {
+    "href": "/huelights/bridges",
+    "text": "Hue Lights"
+  }
+}
