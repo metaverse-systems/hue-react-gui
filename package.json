@@ -1,6 +1,6 @@
 {
   "name": "@metaverse-systems/hue-react-gui",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "",
   "main": "lib/index.js",
   "scripts": {

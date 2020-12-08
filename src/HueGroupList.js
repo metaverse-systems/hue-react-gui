@@ -114,18 +114,20 @@ class HueGroupList extends Component {
       }
     };
 
-    window.Pusher.subscribe('Hue')
-      .bind('MetaverseSystems\\HuePHPBackend\\Events\\HueChangeState', (data) => {
-        let groups = Object.assign([], this.state.groups);
-        data.changes.forEach((group) => {
-          groups.forEach((g, i) => {
-            if(g.group_id != group.group_id) return;
-            if(group.brightness !== undefined) groups[i].brightness = group.brightness;
-            if(group.on !== undefined) groups[i].on = group.on.toString();
+    if(window.Pushed !== undefined) {
+      window.Pusher.subscribe('Hue')
+        .bind('MetaverseSystems\\HuePHPBackend\\Events\\HueChangeState', (data) => {
+          let groups = Object.assign([], this.state.groups);
+          data.changes.forEach((group) => {
+            groups.forEach((g, i) => {
+              if(g.group_id != group.group_id) return;
+              if(group.brightness !== undefined) groups[i].brightness = group.brightness;
+              if(group.on !== undefined) groups[i].on = group.on.toString();
+            });
           });
+          this.setState({ groups: groups });
         });
-        this.setState({ groups: groups });
-      });
+    }
   }
 
   componentDidMount = () => {
