@@ -1,6 +1,6 @@
 {
   "name": "@metaverse-systems/hue-react-gui",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "",
   "main": "lib/index.js",
   "scripts": {
@@ -10,7 +10,7 @@
   "author": "Tim Schwartz",
   "license": "MIT",
   "peerDependencies": {
-    "@material-ui/core": "^4.10.1",
+    "@material-ui/core": "^4.11.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0"
