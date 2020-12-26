@@ -1,6 +1,6 @@
 {
   "name": "@metaverse-systems/hue-react-gui",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "",
   "main": "lib/index.js",
   "scripts": {
@@ -9,12 +9,6 @@
   },
   "author": "Tim Schwartz",
   "license": "MIT",
-  "peerDependencies": {
-    "@material-ui/core": "^4.11.2",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-router-dom": "^5.2.0"
-  },
   "devDependencies": {
     "@babel/core": "^7.10.2",
     "@babel/plugin-proposal-class-properties": "^7.0.0",
@@ -39,7 +33,9 @@
     "babel-loader": "^8.1.0",
     "react-router-dom": "^5.2.0",
     "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.11"
+    "webpack-cli": "^3.3.11",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   },
   "importModules": [
     "HueBridgeList",
